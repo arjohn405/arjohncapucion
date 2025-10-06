@@ -15,7 +15,7 @@ export const Hero = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, hsl(230 50% 25% / 0.95), hsl(240 45% 35% / 0.9)), url(${heroImage})`,
+        backgroundImage: `linear-gradient(135deg, hsl(0 0% 10% / 0.95), hsl(0 0% 20% / 0.9)), url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
