@@ -40,6 +40,19 @@ export const Contact = () => {
             </p>
           </div>
 
+          <div className="flex justify-center mb-8">
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-primary/20 hover:bg-primary hover:text-primary-foreground"
+            >
+              <a href="/resume.pdf" download="Alex_Morgan_Resume.pdf">
+                Download Resume
+              </a>
+            </Button>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <a
               href="mailto:alex.morgan@example.com"

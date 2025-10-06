@@ -44,15 +44,14 @@ export const Hero = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
-                onClick={() => {
-                  const element = document.getElementById("contact");
-                  if (element) element.scrollIntoView({ behavior: "smooth" });
-                }}
                 size="lg"
                 variant="outline"
+                asChild
                 className="text-lg px-8 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               >
-                Get in Touch
+                <a href="/resume.pdf" download="Alex_Morgan_Resume.pdf">
+                  Download Resume
+                </a>
               </Button>
             </div>
           </div>
