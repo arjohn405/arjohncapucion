@@ -36,10 +36,10 @@ export const About = () => {
                 Design Philosophy
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                With over 8 years of experience crafting digital products, I specialize in transforming complex user needs into elegant, intuitive interfaces.
+                With over 3 years of experience crafting digital products, I specialize in transforming complex user needs into elegant, intuitive interfaces.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                I've worked with startups and Fortune 500 companies, leading cross-functional teams to deliver products that users love and businesses rely on. My approach blends strategic thinking, rigorous research, and a passion for pixel-perfect execution.
+                I've worked with startups and individual clients, leading cross-functional teams to deliver products that users love and businesses rely on. My approach blends strategic thinking, rigorous research, and a passion for pixel-perfect execution.
               </p>
             </div>
 
@@ -47,15 +47,15 @@ export const About = () => {
               <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-2xl text-primary-foreground">
                 <div className="space-y-6">
                   <div>
-                    <p className="text-5xl font-display font-bold mb-2">50+</p>
+                    <p className="text-5xl font-display font-bold mb-2">30+</p>
                     <p className="text-primary-foreground/80">Projects Delivered</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-display font-bold mb-2">8+</p>
+                    <p className="text-5xl font-display font-bold mb-2">3+</p>
                     <p className="text-primary-foreground/80">Years Experience</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-display font-bold mb-2">15+</p>
+                    <p className="text-5xl font-display font-bold mb-2">10+</p>
                     <p className="text-primary-foreground/80">Happy Clients</p>
                   </div>
                 </div>

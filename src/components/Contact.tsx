@@ -47,7 +47,7 @@ export const Contact = () => {
               asChild
               className="border-primary/20 hover:bg-primary hover:text-primary-foreground"
             >
-              <a href="/resume.pdf" download="Alex_Morgan_Resume.pdf">
+              <a href="/Arjohn Capucion - Resume.pdf" download="Arjohn Capucion - Resume.pdf">
                 Download Resume
               </a>
             </Button>
@@ -55,7 +55,7 @@ export const Contact = () => {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <a
-              href="mailto:alex.morgan@example.com"
+              href="mailto:acapucion123@gmail.com"
               className="group"
             >
               <Card className="border-border hover:shadow-[var(--shadow-elegant)] transition-all duration-300 bg-card h-full">
@@ -64,13 +64,13 @@ export const Contact = () => {
                     <Mail size={24} className="text-accent group-hover:text-accent-foreground" />
                   </div>
                   <h3 className="font-bold mb-2 text-foreground">Email</h3>
-                  <p className="text-sm text-muted-foreground">alex.morgan@example.com</p>
+                  <p className="text-sm text-muted-foreground">acapucion123@gmail.com</p>
                 </CardContent>
               </Card>
             </a>
 
             <a
-              href="https://linkedin.com/in/alexmorgan"
+              href="https://www.linkedin.com/in/arjohn-capucion/"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -81,13 +81,13 @@ export const Contact = () => {
                     <Linkedin size={24} className="text-accent group-hover:text-accent-foreground" />
                   </div>
                   <h3 className="font-bold mb-2 text-foreground">LinkedIn</h3>
-                  <p className="text-sm text-muted-foreground">@alexmorgan</p>
+                  <p className="text-sm text-muted-foreground">@arjohncapucion</p>
                 </CardContent>
               </Card>
             </a>
 
             <a
-              href="https://github.com/alexmorgan"
+              href="https://github.com/arjohn405"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -98,7 +98,7 @@ export const Contact = () => {
                     <Github size={24} className="text-accent group-hover:text-accent-foreground" />
                   </div>
                   <h3 className="font-bold mb-2 text-foreground">GitHub</h3>
-                  <p className="text-sm text-muted-foreground">@alexmorgan</p>
+                  <p className="text-sm text-muted-foreground">@arjohn405</p>
                 </CardContent>
               </Card>
             </a>

@@ -25,11 +25,11 @@ export const Hero = () => {
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground">
-                  Senior UI/UX Designer
+                  UI/UX Designer
                 </span>
               </div>
               <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] tracking-tight">
-                Alex Morgan
+                Arjohn Capucion
               </h1>
               <div className="w-20 h-1 bg-foreground"></div>
             </div>
@@ -56,7 +56,7 @@ export const Hero = () => {
                 asChild
                 className="text-base px-8 h-12 border-foreground/20 hover:bg-foreground hover:text-background font-medium"
               >
-                <a href="/resume.pdf" download="Alex_Morgan_Resume.pdf">
+                <a href="/Arjohn Capucion - Resume.pdf" download="Arjohn Capucion - Resume.pdf">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
                 </a>
@@ -66,15 +66,15 @@ export const Hero = () => {
             {/* Stats or highlights */}
             <div className="grid grid-cols-3 gap-8 pt-12 border-t border-border">
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-foreground">8+</div>
+                <div className="text-3xl md:text-4xl font-bold text-foreground">3+</div>
                 <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-foreground">50+</div>
+                <div className="text-3xl md:text-4xl font-bold text-foreground">30+</div>
                 <div className="text-sm text-muted-foreground mt-1">Projects Completed</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-foreground">15+</div>
+                <div className="text-3xl md:text-4xl font-bold text-foreground">10+</div>
                 <div className="text-sm text-muted-foreground mt-1">Happy Clients</div>
               </div>
             </div>
