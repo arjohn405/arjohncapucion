@@ -41,7 +41,7 @@ export const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60 text-sm">
           <p className="flex items-center justify-center gap-1">
-            Designed & Built with <Heart size={14} className="text-accent fill-accent" /> by Arjohn Capucion © 2025
+            Designed & Built with <Heart size={14} className="text-accent fill-accent" /> by Arjohn Capucion © 2026
           </p>
         </div>
       </div>
