@@ -44,7 +44,7 @@ const testimonials = [
   {
     quote: "Outstanding attention to detail and ability to balance user needs with business goals.",
     author: "Michael Rodriguez",
-    role: "CEO, StartupHub",
+    role: "Head of Design, StartupHub",
   },
 ];
 

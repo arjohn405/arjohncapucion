@@ -25,7 +25,7 @@ export const Hero = () => {
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground">
-                  UI/UX Designer
+                 Product Manager & UI/UX Designer
                 </span>
               </div>
               <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] tracking-tight">

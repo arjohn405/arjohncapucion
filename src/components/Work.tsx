@@ -1,37 +1,37 @@
 import { ProjectCard } from "./ProjectCard";
-import fintechImg from "@/assets/project-fintech.jpg";
-import ecommerceImg from "@/assets/project-ecommerce.jpg";
-import healthImg from "@/assets/project-health.jpg";
-import foodImg from "@/assets/project-food.jpg";
+import gram from "@/assets/project-gram.png";
+import hack from "@/assets/project-hack.png";
+import digi from "@/assets/project-digi.png";
+import eco from "@/assets/project-eco.png";
 
 const projects = [
   {
-    title: "FinTech Mobile Banking",
-    description: "Redesigned mobile banking experience for a leading fintech startup, focusing on simplified navigation and real-time insights.",
-    image: fintechImg,
+    title: "Gramway Fitness App",
+    description: "Designed a fitness app that adapts to user preferences and promotes healthy habits.",
+    image: gram,
     tags: ["Mobile Design", "User Research", "Prototyping"],
     metrics: "↑45% user engagement",
   },
   {
-    title: "Luxury E-Commerce Platform",
-    description: "Created an elegant shopping experience for a premium fashion brand, balancing aesthetics with conversion optimization.",
-    image: ecommerceImg,
-    tags: ["E-Commerce", "UI Design", "A/B Testing"],
-    metrics: "↑32% conversion rate",
+    title: "HackHaive Hackathon Platform",
+    description: "Developed a collaborative platform for hackathon participants, enhancing team communication and project management.",
+    image: hack,
+    tags: ["Web Design", "Collaboration", "Prototyping"],
+    metrics: "↑50% team satisfaction",
   },
   {
-    title: "Healthcare Patient Portal",
-    description: "Designed an accessible patient portal for a healthcare network, prioritizing ease of use for diverse age groups.",
-    image: healthImg,
-    tags: ["Healthcare", "Accessibility", "UX Strategy"],
-    metrics: "↑60% appointment bookings",
+    title: "Digi8 Music and Recording Studio",
+    description: "Created a modern website for a music and recording studio, showcasing their services and portfolio.",
+    image: digi,
+    tags: ["Web Design", "Branding", "Portfolio"],
+    metrics: "↑70% site traffic",
   },
   {
-    title: "Food Delivery App",
-    description: "Streamlined ordering flow and personalized recommendations for a food delivery platform serving 2M+ users.",
-    image: foodImg,
-    tags: ["Mobile App", "Personalization", "User Testing"],
-    metrics: "↑28% repeat orders",
+    title: "Resiklo Eco-Friendly App",
+    description: "Led the design of an eco-friendly app promoting recycling and sustainable living through gamification.",
+    image: eco,
+    tags: ["Mobile App", "Personalization", "User Engagement"],
+    metrics: "↑65%  user retention",
   },
 ];
 
