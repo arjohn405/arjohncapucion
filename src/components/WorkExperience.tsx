@@ -5,7 +5,7 @@ const timeline = [
   {
     company: "Starpay Corporation",
     title: "Technical Product Manager & UI/UX Designer",
-    date: "May 2024 — Present",
+    date: "May 2025 — Present",
     bullets: [
       "Led cross-functional collaboration between designers and developers to refine product flows and visual consistency.",
       "Defined and implemented scalable UI components in Figma and front-end prototypes.",
