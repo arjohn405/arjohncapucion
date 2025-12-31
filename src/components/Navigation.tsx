@@ -17,7 +17,8 @@ export const Navigation = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      element.focus?.({ preventScroll: true });
       setIsMobileMenuOpen(false);
     }
   };
@@ -50,6 +51,12 @@ export const Navigation = () => {
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               About
+            </button>
+            <button
+              onClick={() => scrollToSection("experience-item-0")}
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors"
+            >
+              Experience
             </button>
             <button
               onClick={() => scrollToSection("skills")}
@@ -89,6 +96,12 @@ export const Navigation = () => {
                 className="text-foreground/80 hover:text-foreground font-medium transition-colors text-left"
               >
                 About
+              </button>
+              <button
+                onClick={() => scrollToSection("experience-item-0")}
+                className="text-foreground/80 hover:text-foreground font-medium transition-colors text-left"
+              >
+                Experience
               </button>
               <button
                 onClick={() => scrollToSection("skills")}

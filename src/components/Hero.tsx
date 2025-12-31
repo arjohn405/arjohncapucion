@@ -85,7 +85,7 @@ export const Hero = () => {
       {/* Minimalist scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <div className="flex flex-col items-center gap-2 text-muted-foreground/60">
-          <span className="text-xs tracking-wider">SCROLL</span>
+          <span className="text-xs tracking-wider"></span>
           <div className="w-[1px] h-12 bg-muted-foreground/20"></div>
         </div>
       </div>
