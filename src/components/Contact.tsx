@@ -12,11 +12,63 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Formspree endpoint (set in .env: VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/yourFormId)
+  const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT ?? "https://formspree.io/f/maqyrdol";
+
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+
+    const { name, email, message } = formData;
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      toast.error("Please fill out all fields.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    // If no Formspree endpoint configured, fallback to mailto
+    if (!FORMSPREE_ENDPOINT) {
+      const subject = encodeURIComponent(`Website message from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0A%0A${message}`);
+      window.location.href = `mailto:${"acapucion123@gmail.com"}?subject=${subject}&body=${body}`;
+      toast.success("Opening your mail client to send the message...");
+      setFormData({ name: "", email: "", message: "" });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (res.ok) {
+        toast.success("Message sent! I'll get back to you soon.");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        const data = await res.json().catch(() => null);
+        const errMsg = data?.error || data?.message || "Failed to send message.";
+        toast.error(errMsg);
+      }
+    } catch (err) {
+      toast.error("An error occurred while sending your message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -107,35 +159,37 @@ export const Contact = () => {
           <Card className="border-border shadow-[var(--shadow-elegant)] bg-card">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-background border-input"
-                    placeholder="Your name"
-                  />
-                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
+                      Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="bg-background border-input"
+                      placeholder="Your name"
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-background border-input"
-                    placeholder="your.email@example.com"
-                  />
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="bg-background border-input"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
                 </div>
 
                 <div>
@@ -154,12 +208,20 @@ export const Contact = () => {
                   />
                 </div>
 
+                {/** show configuration hint if Formspree endpoint is not set */}
+                {!import.meta.env.VITE_FORMSPREE_ENDPOINT && (
+                  <p className="text-sm text-muted-foreground">
+                    To send messages directly from this form, set <code>VITE_FORMSPREE_ENDPOINT</code> in a <code>.env</code> file (example: <code>https://formspree.io/f/yourFormId</code>). Without it the form will open your mail client as a fallback.
+                  </p>
+                )}
+
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground group"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                 </Button>
               </form>
